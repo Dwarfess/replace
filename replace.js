@@ -202,5 +202,10 @@ module.exports = function(options) {
         if (canReplace) {
             return text.replace(regex, replaceFunc || options.replacement);
         }
+        
+        return {
+          text: text,
+          path: file
+        };
     }
 }
